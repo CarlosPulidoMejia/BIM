@@ -1,0 +1,19 @@
+package com.companny;
+import java.util.Scanner;
+
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int numero;
+        double factorial;
+        System.out.println("Ingresa un número");
+        numero = scanner.nextInt();
+
+        factorial = 1;
+        for(int i = 1; i <= numero; i++) {
+            factorial = factorial * i;
+        }
+        System.out.println("El factorial de " + numero + " es "  + factorial);
+    }
+
+}
