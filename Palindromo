@@ -1,0 +1,36 @@
+package com.companny;
+import java.util.Scanner;
+public class Palindromo {
+    public static boolean EsPalindromo(String palabra) {
+        palabra = palabra.toLowerCase();
+        palabra = palabra.replace(" ", "");
+        palabra = palabra.replace("á", "a");
+        palabra = palabra.replace("é", "e");
+        palabra = palabra.replace("í", "i");
+        palabra = palabra.replace("ó", "o");
+        palabra = palabra.replace("ú", "u");
+
+        int inicio = 0;
+        int fin = palabra.length() - 1;
+        for (int i = 0; i < fin; i++) {
+            if (palabra.charAt(inicio)!= palabra.charAt(fin)) {
+                return false;
+            }
+            inicio++;
+            fin--;
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String palabra;
+        System.out.println("Ingresa una palabra");
+        palabra = sc.nextLine();
+
+        if (EsPalindromo(palabra)) {
+            System.out.print("Es Palindromo");
+        }else{
+            System.out.print("No es un Palindromo");
+        }
+    }
+}
