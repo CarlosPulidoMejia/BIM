@@ -1,0 +1,17 @@
+package com.companny;
+import java.util.Scanner;
+
+public class ParImpar {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double numero;
+        System.out.println("Ingresa un numero");
+        numero = sc.nextDouble();
+
+        if (numero % 2 == 0) {
+            System.out.println("Par");
+        }else{
+            System.out.println("Impar");
+        }
+    }
+}
